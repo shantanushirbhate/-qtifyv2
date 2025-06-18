@@ -1,0 +1,15 @@
+/* Button.module.css */
+.button{
+width: 170;
+height: 47;
+top: 13px;
+left: 1238px;
+gap: 10px;
+margin-right: 20px;
+border-radius: 12px;
+border-width: 1px;
+padding-top: 10px;
+padding-right: 16px;
+padding-bottom: 10px;
+padding-left: 16px;
+}
