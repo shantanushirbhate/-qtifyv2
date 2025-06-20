@@ -1,18 +1,18 @@
 import React from "react";
 import Button from "../Button/Button";
 import Search from "../Search/Search";
-import styles from "./Navbar.module.css";
+import Styles from "../Navbar/Navbar.module.css"
 import Logo from "../../assets/Navbarlogo.png";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Navbarcomponent({ searchData }) {
   return (
-    <nav className={styles.navbar}>
+    <nav className={Styles.navbar}>
       {/* <Link to="/"> */}
-      <img src={Logo} alt="Logo" className={styles.logo} />
+      <img src={Logo} alt="Logo" className={Styles.logo}  />
       {/* </Link> */}
-      <div className={styles.searchContainer}>
-        <SearchIcon className={styles.searchIcon} />
+      <div className={Styles.searchContainer}>
+        <SearchIcon className={Styles.searchIcon} />
         <Search
           placeholder="Search a song of your choice"
           searchData={searchData}

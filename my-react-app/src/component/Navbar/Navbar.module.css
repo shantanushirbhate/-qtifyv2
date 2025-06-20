@@ -1,18 +1,18 @@
- .navbar {
-  position: fixed;       
-  top: 0;                
-  left: 0;               
-  width: 100%;   
-  background-color: #34C94B;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #34c94b;
   height: 74px;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-} 
-
-
-
-
-
-
+}
+.logo {
+  width: 67;
+  height: 34;
+  top: 20px;
+  left: 32px;
+}
