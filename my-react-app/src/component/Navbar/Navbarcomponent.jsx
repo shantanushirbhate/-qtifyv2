@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import Search from "../Search/Search";
-import Styles from "../Navbar/Navbar.module.css"
+import Styles from "./Navbar.module.css"
 import Logo from "../../assets/Navbarlogo.png";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -12,9 +12,9 @@ function Navbarcomponent({ searchData }) {
       <img src={Logo} alt="Logo" className={Styles.logo}  />
       {/* </Link> */}
       <div className={Styles.searchContainer}>
-        <SearchIcon className={Styles.searchIcon} />
+        {/* <SearchIcon className={Styles.searchIcon} /> */}
         <Search
-          placeholder="Search a song of your choice"
+          placeholder="Search a album of your choice"
           searchData={searchData}
         />
       </div>

@@ -1,25 +1,39 @@
+
+/* first css */
 .searchWrapper {
   position: relative;
   width: 100%;
-  max-width: 400px; 
+  max-width: 400px;
 }
 
 .searchInput {
-  width: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 2.5rem; 
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
+  width: 568px;
+  height: 48px;
+  top: 13px;
+  left: 436px;
+ border-radius: 8px;
+  border-width: 1px;
+  background: #FFFFFF;
+  border: 1px solid #121212
+
 }
 
+
 .searchIcon {
+width: 20.000930786132812;
+height: 20.00043296813965;
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 33rem;
   transform: translateY(-50%);
-  width: 1rem;
-  height: 1rem;
-  fill: #888; 
-  
+  color: black;
+  pointer-events: none;
+}
+.searchInput::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+  padding-left: 20px;
+  font-family: Poppins;
 }

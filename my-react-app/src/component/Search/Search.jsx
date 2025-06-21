@@ -1,6 +1,7 @@
+
 import React, { useState } from "react";
 import styles from "./Search.module.css";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 
 function Search({ placeholder, searchData }) {
   const [query, setQuery] = useState("");
@@ -8,11 +9,11 @@ function Search({ placeholder, searchData }) {
   const handleInputChange = (e) => {
     const value = e.target.value;
     setQuery(value);
-    searchData(value); 
+    searchData(value);
   };
+
   return (
     <div className={styles.searchWrapper}>
-     <SearchIcon  className={styles.searchIcon} />
       <input
         type="text"
         value={query}
@@ -20,6 +21,9 @@ function Search({ placeholder, searchData }) {
         className={styles.searchInput}
         placeholder={placeholder}
       />
+            <div className="verticl-line" ></div>
+
+      <SearchIcon className={styles.searchIcon} />
     </div>
   );
 }
