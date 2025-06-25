@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "./Hero.module.css";
-import Heroimage from '../../assets/vibrating-headphone 1 (2).jpg'
+import Heroimage from '../../assets/vibrating-headphone 1.png'
 
 function Hero() {
   return (
     <div className={styles.hero}>
-      <div>
+      <div className={styles.heading} >
         <h1>100 Thousand Songs, ad-free</h1>
         <h1>Over thousands podcast episodes</h1>
       </div>
       <div>
         <img
-          className="headphone"
+          className={styles.headphone}
           src={Heroimage}
-          width={212}
           alt="headphones"
         />
       </div>

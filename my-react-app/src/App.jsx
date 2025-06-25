@@ -1,12 +1,19 @@
 import './App.css';
 import Navbar from './component/Navbar/Navbarcomponent';
 import Hero from './component/Hero/Hero'
+import Section from './component/Section/Section';
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero/>
+      <Hero />
+     <div>
+      <Section
+        title="Top Albums"
+        fetchUrl="https://qtify-backend-labs.crio.do/albums/top"
+      />
+    </div>
     </>
   );
 }

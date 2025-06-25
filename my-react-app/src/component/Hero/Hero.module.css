@@ -1,13 +1,98 @@
 .hero {
-  background-color: black;
-  height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-  font-family: Poppins;
+  height: 20rem;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Poppins;
 }
+
+.heading{
+  color: #FFFFFF;
+  font-size: 10px;
+
+}
+.headphone{
+width: 212px;
+height: 212px;
+top: 103px;
+left: 914px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* npm install -g vercel */
 /* vercel login */

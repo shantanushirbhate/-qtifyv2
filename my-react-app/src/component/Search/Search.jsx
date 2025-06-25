@@ -13,18 +13,19 @@ function Search({ placeholder, searchData }) {
   };
 
   return (
-    <div className={styles.searchWrapper}>
-      <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        className={styles.searchInput}
-        placeholder={placeholder}
-      />
-            <div className="verticl-line" ></div>
+   <div className={styles.searchWrapper}>
+  <input
+    type="text"
+    value={query}
+    onChange={handleInputChange}
+    className={styles.searchInput}
+    placeholder={placeholder}
+  />
+  <div className={styles.iconWrapper}>
+    <SearchIcon className={styles.searchIcon} />
+  </div>
+</div>
 
-      <SearchIcon className={styles.searchIcon} />
-    </div>
   );
 }
 
