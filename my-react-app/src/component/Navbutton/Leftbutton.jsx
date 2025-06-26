@@ -1,12 +1,11 @@
-import React from "react";
-import LeftArrow from "../../assets/right.svg";
+import LeftArrow from "../../assets/left.svg";
 import styles from "./Navbutton.module.css"
 
-function RightNavButton({ className }) {
+function LeftNavButton({ className }) {
   return (
     <div className={`${styles.navButton} ${className}`}>
       <img src={LeftArrow} alt="Left Arrow" />
     </div>
   );
 }
-export default RightNavButton
+export  default  LeftNavButton

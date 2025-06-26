@@ -1,6 +1,5 @@
 .section {
   padding: 10px;
-  width: 100%;
 }
 
 .header {
@@ -33,8 +32,8 @@
 /* Grid view for show all */
 .gridView {
   display: grid;
-  grid-template-columns: repeat(7, minmax(160px, 1fr));
-  gap: 100px;
+  grid-template-columns: repeat(6, minmax(10px, 1fr));
+  gap: 10px;
 
 }
 

@@ -12,7 +12,6 @@ function Navbarcomponent({ searchData }) {
       <img src={Logo} alt="Logo" className={Styles.logo}  />
       {/* </Link> */}
       <div className={Styles.searchContainer}>
-        {/* <SearchIcon className={Styles.searchIcon} /> */}
         <Search
           placeholder="Search a album of your choice"
           searchData={searchData}

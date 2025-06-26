@@ -25,7 +25,7 @@ function Section({ title, fetchUrl }) {
       <div className={styles.header}>
         <h2>{title}</h2>
         <button onClick={() => setShowAll((prev) => !prev)} className={styles.toggleBtn}>
-          {showAll ? "Collapse" : "Show All"}
+          {showAll ? "Collapse All" : "Show All"}
         </button>
       </div>
 

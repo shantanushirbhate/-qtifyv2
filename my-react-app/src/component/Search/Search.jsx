@@ -13,20 +13,21 @@ function Search({ placeholder, searchData }) {
   };
 
   return (
-   <div className={styles.searchWrapper}>
+  <div className={styles.searchWrapper}>
   <input
     type="text"
     value={query}
     onChange={handleInputChange}
     className={styles.searchInput}
     placeholder={placeholder}
-  />
-  <div className={styles.iconWrapper}>
+      />
+        <div className={styles.iconWrapper}>
     <SearchIcon className={styles.searchIcon} />
   </div>
 </div>
 
   );
+
 }
 
 export default Search;

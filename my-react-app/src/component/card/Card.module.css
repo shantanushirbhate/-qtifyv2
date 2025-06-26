@@ -1,9 +1,17 @@
+ 
 
 .outercard {
+height: 232px;
+gap: 6px;
   width: 180px;
   min-width: 180px; /* ensures flex children don't shrink */
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+}
+/* AlbumCard.module.css */
+.card {
+  width: 100%;        /* Let parent size it */
+  max-width: 160px;   /* Optional: limit max width */
 }
 
 
@@ -17,19 +25,19 @@
 .infoBox {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .chip {
   background-color: black !important;
   color: white !important;
   border-radius: 16px;
-  padding: 0 8px;
-  width: 100px;
   font-weight: 2px;
   font-size: small;
  font-family: "Poppins", sans-serif;
+ margin-top: -4px;
  margin-right: 2rem;
+ margin-bottom: -30px;
 }
 
 
@@ -38,9 +46,8 @@ font-family: "Poppins", sans-serif;
 color: #fff;
 margin-right: 50rem;
 width: 105px;
-height: 21px;
-font-weight: 400px;
-font-size: 14px;
+ font-weight: 2px;
+  font-size: small;
 line-height: 100%;
 letter-spacing: 0px;
 } 

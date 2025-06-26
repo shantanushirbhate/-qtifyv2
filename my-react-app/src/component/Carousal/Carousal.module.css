@@ -1,9 +1,49 @@
 .carouselWrapper {
   position: relative;
   width: 100%;
-  padding: 0 32px;
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .swiper {
-  padding-bottom: 16px;
+  padding: 0 40px;
 }
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: auto; 
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+/* Remove default blue Swiper arrows */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+
+/* Removes only the Swiper background arrows, keeps the elements */
+:global(.swiper-button-next)::after,
+:global(.swiper-button-prev)::after {
+  display: none;
+}
+
+
