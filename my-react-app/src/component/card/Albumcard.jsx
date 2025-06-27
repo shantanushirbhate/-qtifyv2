@@ -11,7 +11,7 @@ import styles from "./Card.module.css";
 
 function AlbumCard({ image, title, follows }) {
   return (
-    <div className={styles.cardWrapper}>
+    <div className={styles.cardwrapper}>
       <Card className={styles.outercard}>
         <Box className={styles.imageWrapper}>
           <CardMedia

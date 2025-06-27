@@ -68,5 +68,5 @@ button:focus-visible {
   }
 }
 .swiper-slide {
-  width: auto !important;
+  width:100%
 }

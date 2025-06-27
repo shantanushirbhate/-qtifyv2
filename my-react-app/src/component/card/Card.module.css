@@ -1,17 +1,23 @@
- 
+ /* .cardwrapper{
+margin: 5px;
+padding: 50px;
+ } */
 
 .outercard {
 height: 232px;
-gap: 6px;
+gap: 2px;
   width: 180px;
   min-width: 180px; /* ensures flex children don't shrink */
   border-radius: 20px;
   overflow: hidden;
+   border-radius: 50px;
+ 
 }
 /* AlbumCard.module.css */
 .card {
   width: 100%;        /* Let parent size it */
-  max-width: 160px;   /* Optional: limit max width */
+  max-width: 160px;  
+    /* Optional: limit max width */
 }
 
 
@@ -20,6 +26,7 @@ gap: 6px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .infoBox {
