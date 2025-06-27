@@ -1,33 +1,16 @@
-
-import React, { useState } from "react";
+import React from "react";
+import SearchIcon from "../../assets/search-icon.svg";
 import styles from "./Search.module.css";
-import SearchIcon from "@mui/icons-material/Search";
 
-function Search({ placeholder, searchData }) {
-  const [query, setQuery] = useState("");
-
-  const handleInputChange = (e) => {
-    const value = e.target.value;
-    setQuery(value);
-    searchData(value);
-  };
-
+const Search = ({ search }) => {
   return (
-  <div className={styles.searchWrapper}>
-  <input
-    type="text"
-    value={query}
-    onChange={handleInputChange}
-    className={styles.searchInput}
-    placeholder={placeholder}
-      />
-        <div className={styles.iconWrapper}>
-    <SearchIcon className={styles.searchIcon} />
-  </div>
-</div>
-
+    <form className={styles.wrapper}>
+      <input className={styles.search} placeholder={search}></input>
+      <button className={styles.searchButton} type="submit">
+        <img src={SearchIcon} alt="Search" />
+      </button>
+    </form>
   );
-
-}
+};
 
 export default Search;

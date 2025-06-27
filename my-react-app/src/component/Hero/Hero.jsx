@@ -1,42 +1,18 @@
-import React from "react";
-import styles from "./Hero.module.css";
-import Heroimage from '../../assets/vibrating-headphone 1.png'
-
-function Hero() {
+import React from 'react'
+import HeroImage from '../../assets/vibrating-headphone.png'
+import styles from './Hero.module.css'
+const Hero = () => {
   return (
-    <div className={styles.hero}>
-      <div className={styles.heading} >
-        <h1>100 Thousand Songs, ad-free</h1>
-        <h1>Over thousands podcast episodes</h1>
-      </div>
-      <div>
-        <img
-          className={styles.headphone}
-          src={Heroimage}
-          alt="headphones"
-        />
-      </div>
-    </div>
-  );
+    <>  
+        <section className={styles.Hero}>
+            <div className={styles.HeroTitle}>
+                <h1>100 Thousand Songs, ad-free</h1>
+                <h1>Over thousands podcast episodes</h1>
+            </div>
+                <img className={styles.HeroImage} src={HeroImage} alt='headphone'/>
+        </section>
+    </>
+  )
 }
 
-export default Hero;
-
-// import React from "react";
-// import Heroimage from "../../assets/vibrating-headphone 1 (2).jpg";
-
-// function Herocomponent() {
-//   return (
-//     <div style={{ textAlign: "center", padding: "2rem" }}>
-//       <p>100 Thousand Songs, ad-free</p>
-//       <p>Over thousands podcast episodes</p>
-//       <img
-//         src={Heroimage}
-//         alt="Vibrating Headphones"
-//         style={{ maxWidth: "100%", height: "auto", marginTop: "1rem" }}
-//       />
-//     </div>
-//   );
-// }
-
-// export default Herocomponent;
+export default Hero

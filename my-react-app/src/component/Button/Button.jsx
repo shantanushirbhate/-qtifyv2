@@ -1,16 +1,10 @@
-import React from "react";
+import React from 'react'
 import styles from "./Button.module.css";
 
-function Button({ type = "button", className = "" }) {
+const Button = ({children}) => {
   return (
-    <button
-      type={type}
-      className={`${styles.button} ${className}`}
-
-    >
-      Give Feedback
-    </button>
-  );
+    <button className={styles.button} >{children}</button>
+  )
 }
 
-export default Button;
+export default Button

@@ -1,36 +1,78 @@
-import React from "react";
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  Chip,
-  Box,
-} from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import styles from "./Card.module.css";
+import React from 'react'
+import styles from "./Card.module.css"
+import {Chip, Tooltip} from '@mui/material'
 
-function AlbumCard({ image, title, follows }) {
-  return (
-    <div className={styles.cardwrapper}>
-      <Card className={styles.outercard}>
-        <Box className={styles.imageWrapper}>
-          <CardMedia
-            component="img"
-            height="180"
-            image={image}
-            alt={title}
-            className={styles.albumImage}
-          />
-          <Chip
-            label={`${follows} Followers`}
-            className={styles.chip}
-          />
-        </Box>
-        <CardContent className={styles.cardContent} />
-      </Card>
-      <p className={styles.title}>{title}</p>
-    </div>
-  );
+const Card = ({data,type}) => {
+
+  const getCard = (type) => {
+
+    switch(type) {
+
+      case "album" : {
+        const {image,follows,title,songs} = data;
+
+        return (
+
+          <Tooltip title={`${songs?.length} songs`} placement='top' arrow>
+          <div className={styles.wrapper}>
+            <div className={styles.card}>
+              <img src={image} alt='album'/>
+              <div className={styles.banner}>
+                <Chip label={`${follows} Follows`} className={styles.chip} size="small"/>
+              </div>
+            </div>
+            <div className={styles.titleWrapper}>
+              <p>{title}</p>
+            </div>
+          </div>
+          </Tooltip>
+        )
+      }
+      case "song" : {
+        
+        const {image,likes,title,songs} = data;
+        return (
+          <Tooltip title={`${songs?.length} songs`} placement='top' arrow>
+          <div className={styles.wrapper}>
+            <div className={styles.card}>
+              <img src={image} alt='song' loading='lazy' />
+              <div className={styles.banner}>
+                <div className={styles.pill}>
+                  <p>{likes} Likes</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.titleWrapper}>
+              <p>{title}</p>
+            </div>
+          </div>
+          </Tooltip>
+        )
+      }
+      case 'songFilter' : {
+        const {image,likes,title} = data;
+        return (
+        <div className={styles.wrapper}>
+            <div className={styles.card}>
+              <img src={image} alt='song' loading='lazy' />
+              <div className={styles.banner}>
+                <div className={styles.pill}>
+                  <p>{likes} Likes</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.titleWrapper}>
+              <p>{title}</p>
+            </div>
+          </div>
+                    
+        )
+      }
+      default:
+        return <></>
+    } 
+  }
+  return getCard(type)
 }
 
-export default AlbumCard;
+export default Card

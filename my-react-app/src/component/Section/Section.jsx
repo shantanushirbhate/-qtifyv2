@@ -1,59 +1,40 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import styles from "./Section.module.css";
-import AlbumCard from "../card/Albumcard";
+import Card from "../card/Albumcard";
+import { CircularProgress } from "@mui/material";
 import Carousel from "../Carousal/Carousal";
 
-function Section({ title, fetchUrl }) {
-  const [albums, setAlbums] = useState([]);
-  const [showAll, setShowAll] = useState(false);
+const Section = ({ title, data, type }) => {
+  const [carouselToggle, setCarouselToggle] = useState(true);
 
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      try {
-        const res = await axios.get(fetchUrl);
-        setAlbums(res.data);
-      } catch (err) {
-        console.error("Error fetching albums:", err);
-      }
-    };
-    fetchAlbums();
-  }, [fetchUrl]);
-
+  const handleToggle = () => {
+    setCarouselToggle(!carouselToggle);
+  };
   return (
-    <section className={styles.section}>
+    <div>
       <div className={styles.header}>
-        <h2>{title}</h2>
-        <button onClick={() => setShowAll((prev) => !prev)} className={styles.toggleBtn}>
-          {showAll ? "Collapse All" : "Show All"}
-        </button>
+        <h3>{title}</h3>
+        <h4 className={styles.toggleText} onClick={handleToggle}>
+          {carouselToggle ? "Show All" : "Collapse All"}
+        </h4>
       </div>
-
-      {showAll ? (
-        <div className={styles.gridView}>
-          {albums.map((album) => (
-            <AlbumCard
-              key={album.id}
-              image={album.image}
-              title={album.title}
-              follows={album.follows}
-            />
-          ))}
-        </div>
+      {data.length === 0 ? (
+        <CircularProgress />
       ) : (
-        <Carousel
-          items={albums}
-          renderItem={(album) => (
-            <AlbumCard
-              image={album.image}
-              title={album.title}
-              follows={album.follows}
-            />
+        <div className={styles.cardWrapper}>
+          {!carouselToggle ? (
+            <div className={styles.wrapper}>
+                {data.map((card) => (
+                <Card data={card} type={type} key={card.id} />
+                ))}
+            </div>
+          ) : (
+            <Carousel data={data} renderCardComponent={(data) => <Card data={data} type={type}/>}/>
           )}
-        />
+        </div>
       )}
-    </section>
+    </div>
   );
-}
+};
 
 export default Section;

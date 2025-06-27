@@ -1,20 +1,9 @@
-/* Button.module.css */
 .button{
-width: 170;
-height: 47;
-top: 13px;
-left: 1238px;
-gap: 10px;
-margin-right: 20px;
-border-radius: 12px;
-border-width: 1px;
-padding-top: 10px;
-padding-right: 16px;
-padding-bottom: 10px;
-padding-left: 16px;
-font-family: "Poppins", sans-serif;
-font-weight: 10rem;
-font-style: normal;
-background-color: black;
-color: #34C94B;
+    background-color: var(--color-black);
+    color: var(--color-primary);
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin: 14px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
